@@ -4,8 +4,8 @@ import SinglePost from "./SinglePost";
 export default function Posts() {
   // Declare blogs as a state variable
   const [blogs, setBlogs] = useState([]);
-  const API_URL = "http://localhost:3000/api/posts";
-  const API_BASE_URL = "http://localhost:3000/";
+  const API_URL = "http://localhost:3002/api/posts";
+  const API_BASE_URL = "http://localhost:3002/";
 
   useEffect(() => {
     // Use the useEffect hook to fetch data when the component mounts
@@ -16,12 +16,13 @@ export default function Posts() {
     fetch(API_URL, {
       method: "GET",
     })
-      .then((response) => { 
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // Update the blogs state with fetched data
         setBlogs(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching posts:", error);
       });
   };
 
@@ -31,7 +32,7 @@ export default function Posts() {
         {blogs.map((blog, index) => (
           <SinglePost
             key={index}
-            postLink={`/post.html?id=${blog.id}`}
+            postLink={`/post/:id${blog.id}`}
             postImage={API_BASE_URL + blog.post_image}
             postTitle={blog.title}
             postContent={blog.content}

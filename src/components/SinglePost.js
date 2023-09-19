@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Styles/SinglePost.css";
 
 export default function SinglePost({
@@ -14,7 +15,7 @@ export default function SinglePost({
 
   return (
     <div>
-      <a className="post-link" href={postLink}>
+      <Link className="post-link" to={postLink}>
         <div className="post">
           <div className="post-image" style={imageStyle}></div>
           <div className="post-content">
@@ -27,7 +28,7 @@ export default function SinglePost({
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

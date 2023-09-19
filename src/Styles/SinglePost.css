@@ -61,6 +61,11 @@
   margin: 0;
 }
 
+.post-text {
+  overflow: hidden;
+  max-height: 65px;
+}
+
 .post-text p {
   font-size: 1rem;
   font-weight: 400;
