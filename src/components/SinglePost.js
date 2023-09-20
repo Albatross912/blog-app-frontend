@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/SinglePost.css";
+import NewHeader from "./NewHeader";
 
 export default function SinglePost({
   postLink,
@@ -12,9 +13,11 @@ export default function SinglePost({
   const imageStyle = {
     backgroundImage: `url(${postImage})`,
   };
+  // console.log(postImage);
 
   return (
     <div>
+      {/* <NewHeader></NewHeader> */}
       <Link className="post-link" to={postLink}>
         <div className="post">
           <div className="post-image" style={imageStyle}></div>

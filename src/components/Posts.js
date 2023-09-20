@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SinglePost from "./SinglePost";
+import Header from "./Header";
 
 export default function Posts() {
   // Declare blogs as a state variable
@@ -27,6 +28,8 @@ export default function Posts() {
   };
 
   return (
+    <div>
+      <Header>  </Header>
     <div className="main">
       <div className="main-container blog-posts">
         {blogs.map((blog, index) => (
@@ -40,6 +43,7 @@ export default function Posts() {
           />
         ))}
       </div>
+    </div>
     </div>
   );
 }

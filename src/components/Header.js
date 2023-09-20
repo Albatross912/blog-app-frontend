@@ -1,10 +1,20 @@
 import React from "react";
 import "../Styles/Header.css";
+import { Link } from "react-router-dom";
+import AddButton from "./AddButton";
+export default function Header({ backgroundImage }) {
+  const headerStyle = {
+    backgroundImage: backgroundImage, // Set the background image here
+  };
 
-export default function Header() {
   return (
-    <div class="container home-page">
-      <header>
+    <div className="container home-page">
+      <Link className="newpost" to="/newpost">
+        <AddButton />
+      </Link>
+      <header style={headerStyle}>
+        {" "}
+        {/* Apply the background image to the header */}
         <div className="header-container">
           <div className="profile-image"></div>
           <div className="title">Nazariy Dumanskyy</div>
