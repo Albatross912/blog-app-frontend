@@ -6,7 +6,7 @@ import NewHeader from "./NewHeader";
 // import { useHistory } from "react-router-dom";
 
 export default function NewPost() {
-  const API_URL = "http://localhost:3002/api/newpost";
+  const API_URL = "https://backend-blog-app-ivjj.onrender.com/api/newpost";
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
   const [postImage, setPostImage] = useState(null);
