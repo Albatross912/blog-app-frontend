@@ -17,7 +17,7 @@ export default function Header({ backgroundImage }) {
         {/* Apply the background image to the header */}
         <div className="header-container">
           <div className="profile-image"></div>
-          <div className="title">Nazariy Dumanskyy</div>
+          <div className="title">Piyush Sharma</div>
           <div className="subtext">Welcome to my blog!</div>
         </div>
       </header>
