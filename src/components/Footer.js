@@ -3,7 +3,7 @@ import "../Styles/Footer.css";
 export default (Footer) => {
   return (
     <footer>
-      <p>Made with ❤️ by Nazariy Dumanskyy</p>
+      <p>Made with ❤️ by Piyush Sharma</p>
     </footer>
   );
 };
